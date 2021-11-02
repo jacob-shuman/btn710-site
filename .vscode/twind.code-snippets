@@ -1,0 +1,38 @@
+{
+    "Add twind imports": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twind",
+        "body": "import { tw } from 'twind';",
+        "description": "Add twind import"
+    },
+    "Add twind class": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "tw",
+        "body": "tw`${0:}`",
+        "description": "Add className prop with tw"
+    },
+    "Add twind classlist": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twl",
+        "body": "tw(${0:})",
+        "description": "Add className prop with tw"
+    },
+    "Add className with twind": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "ctw",
+        "body": "className={tw`${0:}`}",
+        "description": "Add className prop with tw"
+    },
+    "Add className with twind list": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "ctwl",
+        "body": "className={tw(`${0:}`)}",
+        "description": "Add className prop with tw"
+    },
+    "Add new JSX element with twind": {
+        "scope": "javascript,typescript,typescriptreact",
+        "prefix": "twc",
+        "body": "<${1:} className={${0:}}>\n</>",
+        "description": "Add new component with twind className"
+    },
+}
