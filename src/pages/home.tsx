@@ -5,6 +5,7 @@ import useSWR from 'swr';
 import { tw } from 'twind';
 import Card from '../components/Card';
 import { authenticate } from '../utils/authenticate';
+import ReactPlayer from 'react-player';
 
 export const HomePage: NextPage = () => {
   const [loading, setLoading] = useState(true);
@@ -45,8 +46,19 @@ export const HomePage: NextPage = () => {
         <>
           <h1 className={tw(`text-2xl font-bold`)}>BTN710 Group 5 Site</h1>
 
-          <section className={tw(`flex flex-wrap`)}>
-            <Card className={tw(`p-8`)}>Video Presentation</Card>
+          <section className={tw(`flex flex-col flex-wrap space-y-4`)}>
+            <div className={tw(`flex flex-col space-y-2`)}>
+              <h1 className={tw(`text-xl font-bold`)}>Video Presentation</h1>
+
+              <ReactPlayer
+                playing={true}
+                url="https://www.youtube.com/watch?v=7cg5d96PMOc"
+              />
+            </div>
+
+            <a href="/report.pdf">
+              <Card className={tw(`p-8`)}>Download Report</Card>
+            </a>
           </section>
         </>
       )}
