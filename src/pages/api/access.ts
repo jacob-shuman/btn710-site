@@ -4,10 +4,14 @@ export default function verifyPassword(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const sitePassword = process.env.SITE_PASSWORD;
+  const sitePasswordA = process.env.SITE_PASSWORD_A;
+  const sitePasswordB = process.env.SITE_PASSWORD_B;
   const { password } = JSON.parse(req.body);
 
-  if (sitePassword && sitePassword.length > 0 && password === sitePassword) {
+  if (
+    (sitePasswordA && sitePasswordA.length > 0 && password === sitePasswordA) ||
+    (sitePasswordB && sitePasswordB.length > 0 && password === sitePasswordB)
+  ) {
     return res.status(200).send(undefined);
   } else {
     return res.status(401).send(undefined);
