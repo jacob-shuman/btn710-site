@@ -59,6 +59,7 @@ export const PasswordProtectedPage: NextPage = () => {
           </h2>
 
           <input
+            type="password"
             placeholder="••••••••••••••"
             value={password}
             onChange={({ target }) => setPassword(target.value)}
